@@ -1,0 +1,169 @@
+/*
+Rosa #E4D2E8
+Morado #642B73
+Negro #999
+Gris #f5f5f5
+*/
+html{
+  font-family: 'Mukta', sans-serif;
+}
+a{  /*para quitar el subrayado del link*/
+  text-decoration: none;
+  color: #d503f3;
+}
+img{
+  max-width: 100%;
+}
+a:hover{ /* pseudo clase se define con : puntos*/
+  opacity: 0,2;
+}
+
+a:active{
+  background: blue;
+}
+.title{ /*para transformar los titulos a mayuscula*/
+  text-transform: uppercase;
+  text-align:center;
+}
+.paragraph{
+
+}
+.container{
+  background: #642B73 ; /*--Respaldo si el navegador es viejo*/
+  background: -webkit-linear-gradient(to right, #ef32d9, #89fffd);
+  background: linear-gradient(to right, #ef32d9, #89fffd);
+  height: 100vh;
+  display: flex;/*para centrar el elemento*/
+  align-items: center;/*ambos*/
+  justify-content: center; /*ambos*/
+}
+.content{
+  max-width: 960px; /*ancho máximo*/
+  width: 100%;
+  height:80vh;  /*alto*/
+  background-color :white;/*ancho máximo*/
+  /*box-shadow: diferenciaHorizontal diferencia vertical desenfoque amplitud color para dar sombra al div*/
+  box-shadow: 0 3px 6px rgba(0, 0, 0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 4px;
+  position: relative;
+  overflow: scroll;
+
+}
+.content{
+  padding:1em;
+}
+td{
+  display:block;
+  width:100%;
+}
+
+td:nth-of-type(1){
+  font-size: 1.5em; /*para ver los numeros de la tabla más grandes*/
+  font-weight: bold;
+  color:#642B73;
+}
+
+th{
+  display: none;
+}
+
+.actions{
+  position: absolute;
+  top:1em;
+  right:1em;
+}
+
+.close{
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius:50%;
+  background-color:#642B73;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0, 0, 0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.paragraph{ /*propiedad de las letras de los parrafos*/
+  line-height: 1.9em;
+  font-weight: 300; /*propiedad de las letras grosor*/
+}
+
+.fa-star,.fa-star-o{
+  color: #ffc403;
+}
+
+.table{  /*ancho de la tabla*/
+  width: 100%;
+border-spacing: 0;
+}
+
+.table td, .table th{
+  padding: 1em; /*ancho de la tabla*/
+  text-align: left; /*ancho de la tabla*/
+}
+
+.table tr:nth-child(even){background-color: #f3e5f5;}
+
+.title-item{
+/*  border-bottom-style:solid; /*para subrayado se usa bottom o top,left,right*/
+  /*border-width: 2px; /*especifica el grosor del borde*/
+/*  border-color:#c2e9fb;*/
+font-size: 2em; /*amaño de la fuente*/
+border-bottom: solid 2px #c2e9fb ;
+padding-bottom:1em;
+
+}
+
+.address{
+  font-weight: bold;/*para que aparezcan las direcciones con letras gruesas*/
+  color:#642B73;
+  font-size: 1.2em;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.main-image{
+float: left;
+margin-right:1.2em;
+height: 250px;
+
+}
+.position{
+  background-color: #b490ca;
+  color: white;
+  padding:0.5em;
+  border-radius: 4px;/*short hand properties*/
+  /*border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius:2em;*/
+  margin-right: 0.5em;
+}
+@media(min-width:900px){ /*para adaptar a pantallas más grandes*/
+  th{
+      display: table-cell;
+    }
+
+  td{
+    width:auto;
+    display: table-cell;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+  }
+    .content{
+      padding: 1.8em;
+    }
+  }
+  
+@media(min-height:550px){
+  .content{
+    height: 500px;
+  }
+}
